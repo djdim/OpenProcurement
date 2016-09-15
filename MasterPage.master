@@ -1,0 +1,76 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>
+        <asp:ContentPlaceHolder id="Title" runat="server">
+        </asp:ContentPlaceHolder>
+    </title>
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <link rel="stylesheet" href="css/style.css" type="text/css" charset="utf-8" />
+
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+
+
+<div id="header">
+		<a href="index.aspx" id="logo"><img src="images/logo.jpg" alt="LOGO" /></a>
+		<div id="navigation">
+			<ul>
+				<li><a href="index.aspx">Κεντρική Σελίδα</a></li>
+				<li><a href="support.aspx">Πληροφορίες</a></li>
+				<li><a href="procurements.aspx">Διαγωνισμοί</a></li>
+                <li><a href="view_bids.aspx">Προσφορές</a></li>
+				<li><a href="">Επικοινωνία</a></li>
+                <li id="divsignup" runat="server"><a href="signup.aspx">Εγγραφή</a></li>
+                <li id="logindiv" runat="server"><a href="login.aspx">Είσοδος</a></li>
+                <li id="logoutdiv" runat="server"><a href="logout.aspx">Έξοδος</a></li>
+			</ul>
+		</div>
+
+	</div> <!-- /#header -->
+	 <!-- /#adbox -->
+	<div id="contents">
+		<div class="body">
+			<div id="sidebar">
+				<h3>Κύριο Μενού</h3>
+				<ul>
+					<li>
+                        <asp:Label ID="Label_Menou_01" runat="server" Text=""></asp:Label>
+					</li>
+					<li>
+					</li>
+					<li>
+						<asp:Label ID="Label_Menou_02" runat="server" Text=""></asp:Label>
+                    </li>
+                    <li>
+                        <a id="div_menu_bids" runat="server" href="bids.aspx">Οι προσφορές μου</a>
+                        <a id="div_menu_login" runat="server" href="login.aspx">Σύνδεση</a>
+						<a id="div_menu_logout" runat="server" href="logout.aspx">Αποσύνδεση</a>
+                    </li>
+				</ul>
+			</div>
+			<div id="main">
+			            <asp:ContentPlaceHolder id="ContentBody" runat="server">
+                        </asp:ContentPlaceHolder>	
+             </div>
+		</div>
+	</div> <!-- /#contents -->
+	<div id="footer">
+		
+		<span class="footnote">&copy; Copyright &copy; 2011. All rights reserved</span>
+	</div>
+
+
+    </div>
+    </form>
+</body>
+</html>
